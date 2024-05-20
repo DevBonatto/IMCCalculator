@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --alert-bg: rgb(240, 62, 62);
+  --alert-font-color: rgb(255, 255, 255);
+
+  --body-bg: rgb(4, 9, 37);
+  --main-bg: rgb(255, 255, 255);
+  --main-shadow: 0 .2rem .4rem 0 rgba(0, 0, 0, 0.10);
+
+  --h1: rgb(12, 52, 64);
+  --label-font: rgb(0, 69, 58);
+  --input-bg-color: rgb(220, 226, 233);
+  --input-text-color: rgb(33, 37, 41);
+  --input-placeholder: rgba(73, 80, 87, 0.5);
+  --input-border-selected: rgb(2, 120, 156);
+  --input-border-not-selected: rgba(73, 80, 87, 0.3);
+
+  --button-bg: rgb(2, 120, 156);
+  --button-color: rgb(255, 255, 255);
+  --button-hover: rgba(2, 121, 157, 0.8);
+
+  --modal-bg-: rgba(0, 0, 0, 0.7);
+}
+
+body, input, button {
+  font-family: 'Roboto';
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+body {
+  background: var(--body-bg);
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0 2rem;
+}
+
+.card {
+  background: var(--main-bg);
+
+  padding: 4.8rem 6.4rem 6.4rem;
+  width: min(42.8rem, 90%);
+  box-shadow: var(--main-shadow);
+  border-radius: .6rem;
+
+  display: grid;
+  place-items: center;
+}
+
+.title {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  color: var(--h1);
+}
+
+/* Aplicar no input-wrapper que anterior a ele tenha um input-wrapper*/
+.input-wrapper + .input-wrapper {
+  margin-top: 1.6rem;
+}
+
+form {
+  width: min(30rem, 100%)
+}
+
+form h1 {
+  margin-bottom: 3.2rem;
+}
+
+form label {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--label-font);
+  margin-bottom: .8rem;
+  display: block;
+}
+
+form input {
+  width: 100%;
+  border: 1px solid var(--input-border-not-selected);
+  padding: 1.6rem;
+  background: var(--input-bg-color);
+  border-radius: .4rem;
+}
+
+form input::placeholder {
+  color: var(--input-placeholder);
+}
+
+form input:focus {
+  outline: 2px solid var(--input-border-selected);
+}
+
+form button {
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  width: 100%;
+
+  border: none;
+  border-radius: .4rem;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+form button:hover {
+  background: var(--button-hover);
+}
+
+/* Modal */
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* inset seta a caixa .modal-wrapper como left 0 right 0 top 0 e bottom 0, fazendo assim com que a caixa (.modal-wrapper) preencha toda a tela */
+
+.modal-wrapper {
+  position: absolute;
+  inset: 0;
+  background: var(--modal-bg-);
+
+  display: grid;
+  place-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* positivos relative serve para setar como o pai do elemento que está sendo setado o absolute, ou seja, o botão de fechar no .modal button, fazendo com que o X fique dentro da caixa modal*/
+.modal {
+  position: relative;
+}
+
+.modal button {
+  background: none;
+  border: none;
+
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  cursor: pointer;
+  
+  transition: transform .3s;
+}
+
+.modal button:hover {
+  transform: scale(1.2);
+}
+
+/* Alert box */
+.alert-error.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-error {
+  position: absolute;
+  background-color: var(--alert-bg);
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  color: var(--alert-font-color);
+  padding: .8rem 0;
+  font-weight: bold;
+
+  visibility: hidden .5s;
+  opacity: 0 .5s;
+  transform: translateY(-4rem);
+  transition: transform .5s;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .card {
+    padding: 2.4rem 3.2rem 3.2rem;
+  }
+}
