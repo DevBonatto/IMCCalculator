@@ -28,6 +28,7 @@ Neste desafio foi criado uma calculadora de IMC (Índice de massa corporal), no 
 - Funções
 - ESModules
 - Design responsivo
+- Clean Code (básico)
 
 ## 🎉 Extras
 - O campo retorna nulo após o usuário fechar o modal do cálculo;
