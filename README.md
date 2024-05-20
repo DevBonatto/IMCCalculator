@@ -41,7 +41,7 @@ Neste desafio foi criado uma calculadora de IMC (Índice de massa corporal), no 
 </p>
 
 ## ✅ Resultado
-- [Acesse o resultado finalizado da calculadora de IMC, online](https://devbonatto.github.io/IMCCalculator/)
+[Acesse o resultado finalizado da calculadora de IMC, online](https://devbonatto.github.io/IMCCalculator/)
 
 ## 🔖 Layout
 Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/ghbxYCRBy4pjlvArItsVUT/IMC-Copy?fuid=1369823793362288511)
