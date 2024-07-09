@@ -21,7 +21,7 @@ function handleSubmit(event) {
 
   if(weightOrHeightIsNotANumber) {
     alertError.open()
-    return;
+    returns
   }
 
   alertError.close()
