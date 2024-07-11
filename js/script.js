@@ -21,11 +21,9 @@ function handleSubmit(event) {
 
   if(weightOrHeightIsNotANumber) {
     alertError.open()
-    returns
+    return
   }
-
-  alertError.close()
-
+  
   const result = calculateIMC(weight, height)
   displayResultMessage(result)
 }
