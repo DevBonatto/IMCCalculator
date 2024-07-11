@@ -49,4 +49,4 @@ Neste desafio foi criado uma calculadora de IMC (Índice de massa corporal), no 
 Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/ghbxYCRBy4pjlvArItsVUT/IMC-Copy?fuid=1369823793362288511)
 
 ## 📄 Documentação Lógica
-[CLIQUE AQUI](https://drive.google.com/file/d/1RSBBXVeXJZgpVUl2z4ObAjUNk060H8e2/view?usp=sharing) para ver a documentação lógica do projeto.
+[CLIQUE AQUI](https://drive.google.com/file/d/1e5xCdRKXAzaZwXs27aKL9o6wcRNP6RnC/view?usp=sharing) para ver a documentação lógica do projeto.
