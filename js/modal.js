@@ -21,7 +21,7 @@ function handleClose() {
 }
 
 function handleKeyDown(event) {
-  if(event.key === 'Escape') {
+  if(event.key === 'Escape' && Modal.wrapper.classList.contains('open')) {
     Modal.close()
 
     inputHeight.value = null
